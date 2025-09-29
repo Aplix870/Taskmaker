@@ -1,8 +1,5 @@
 {
   "expo": {
-    "assetBundlePatterns": [
-        "**/*"
-      ],
     "name": "organiser_app",
     "slug": "organiser_app",
     "version": "1.0.0",
@@ -47,10 +44,12 @@
     "experiments": {
       "typedRoutes": true
     },
+    "router": {
+      "origin": "hash",
+      "basePath": "/Taskmaker"
+    },
+    "assetBundlePatterns": ["**/*"],
     "extra": {
-      "router": {
-        "basePath": "/Taskmaker"
-      },
       "eas": {
         "projectId": "fefe7416-0699-445b-9378-dde49fee289d"
       }
