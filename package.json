@@ -5,6 +5,7 @@
 "scripts": {
   "predeploy": "npm run build:web",
   "deploy": "gh-pages -d dist",
+  "postbuild:web": "echo > dist/.nojekyll",
   "start": "expo start",
   "reset-project": "node ./scripts/reset-project.js",
   "android": "expo run:android",
