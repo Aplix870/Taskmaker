@@ -45,8 +45,7 @@
       "typedRoutes": true
     },
     "router": {
-      "origin": "hash",
-      "basePath": "/Taskmaker"
+      "origin": "hash"
     },
     "assetBundlePatterns": ["**/*"],
     "extra": {
