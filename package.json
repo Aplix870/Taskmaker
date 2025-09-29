@@ -2,9 +2,9 @@
   "name": "organiser_app",
   "main": "expo-router/entry",
   "version": "1.0.0",
- "scripts": {
+"scripts": {
   "predeploy": "npm run build:web",
-  "deploy": "gh-pages -d web-build",
+  "deploy": "gh-pages -d dist",
   "start": "expo start",
   "reset-project": "node ./scripts/reset-project.js",
   "android": "expo run:android",
@@ -12,8 +12,9 @@
   "web": "expo start --web",
   "lint": "expo lint",
   "build:web": "expo export --platform web",
-  "serve:web": "serve web-build"
+  "serve:web": "serve dist"
 }
+
 ,
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",
