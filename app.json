@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "organiser_app",
-    "slug": "organiser_app",
+    "name": "Taskmaker",
+    "slug": "Taskmaker",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -26,7 +26,8 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "basePath": "/Taskmaker"
     },
     "plugins": [
       "expo-router",
@@ -47,11 +48,12 @@
     "router": {
       "origin": "hash"
     },
-    "assetBundlePatterns": ["**/*"],
     "extra": {
       "eas": {
         "projectId": "fefe7416-0699-445b-9378-dde49fee289d"
       }
-    }
+    },
+     "assetBundlePatterns": ["**/*"]
+    
   }
 }

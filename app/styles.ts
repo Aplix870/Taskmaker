@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
   },
   textTitle: {
     fontSize: 50,
-    marginLeft: 10,
+    marginLeft: 25,
     color: 'black',
   },
   textContents: {

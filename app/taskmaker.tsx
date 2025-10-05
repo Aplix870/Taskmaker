@@ -125,7 +125,7 @@ const handleSubmit = async () => {
          <View style={[styles.titleContainer, { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }]}>
 
           {/*Title + Button to go back to tasks*/}
-          <Text style={[styles.textTitle,{fontSize: 30 * scale}]}>Taskmaker</Text>
+          <Text style={[styles.textTitle,{fontFamily: "PacificoRegular", fontSize: 45 * scale}]}>Taskmaker</Text>
            <TouchableOpacity onPress={() => router.push('/')} style={{ backgroundColor: '#fff', padding: 10, borderRadius: 8 }}>
               <MaterialIcons
                 name='format-list-bulleted'
@@ -138,14 +138,14 @@ const handleSubmit = async () => {
       
          {/*Text showing user what page they're on. This changes depending on whether the user is creating/editing! */}
       <View style={[styles.centerBox, {marginHorizontal: panelMargin, marginVertical: 20}]}>
-        <Text style={[styles.textName, {margin:10, alignItems:'center', fontSize: 30 * scale}]}>
+        <Text style={[styles.textName, {fontFamily: "OswaldMedium", margin:10, alignItems:'center', fontSize: 30 * scale}]}>
           {isEdit ? 'Edit Task' : 'Create New Task'}
         </Text>
         
   {/*If the user has actually set a due date, show that they've set one and allow them to cancel it*/}
        {alarm && (
   <View style={{ flexDirection: 'row', alignItems: 'center', margin: 5 }}>
-    <Text style={{ fontSize: 25 * scale, color: 'red', flex: 1 }}>
+    <Text style={{fontFamily: "SpaceMonoRegular", fontSize: 25 * scale, color: 'red', flex: 1 }}>
       Alarm set for: {alarm.toLocaleDateString()} {alarm.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
     </Text>
     <TouchableOpacity
@@ -164,7 +164,7 @@ const handleSubmit = async () => {
                   value={name}
                   onChangeText={setName}
                   clearButtonMode="always"
-                  style={[styles.searchBox,{backgroundColor:backColour, color: textColour, fontSize: 25 * scale, height: '8%'}]}
+                  style={[styles.searchBox,{fontFamily: "SpaceMonoRegular", backgroundColor:backColour, color: textColour, fontSize: 25 * scale, height: '8%'}]}
                   autoCapitalize="sentences"
                   autoCorrect={true}
                 />
@@ -175,7 +175,7 @@ const handleSubmit = async () => {
                   value={description}
                   onChangeText={setDescription}
                   clearButtonMode="always"
-                  style={[styles.searchBox,{backgroundColor:backColour, color: textColour, fontSize: 25 * scale, height: '100%', flex:3, textAlignVertical: 'top'}]}
+                  style={[styles.searchBox,{fontFamily: "SUSERegular", backgroundColor:backColour, color: textColour, fontSize: 25 * scale, height: '100%', flex:3, textAlignVertical: 'top'}]}
                   autoCapitalize="none"
                   autoCorrect={true}
                   multiline
@@ -345,7 +345,7 @@ const handleSubmit = async () => {
 
 {/*Submit button*/}
         <TouchableOpacity onPress={handleSubmit} style={[styles.smallButton,styles.center, {flex:10, margin:2}]}>
-            <Text style={{ fontSize: 20 * scale, fontWeight: '600' }}>
+            <Text style={{fontFamily: "OswaldMedium", fontSize: 30 * scale, fontWeight: '600' }}>
               {isEdit ? 'Save Changes' : 'Create New Task'}
             </Text>
         </TouchableOpacity>

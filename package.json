@@ -5,6 +5,7 @@
   "scripts": {
     "predeploy": "npm run build:web",
     "deploy": "gh-pages -d dist",
+    "build:web": "expo export --platform web",
     "postbuild:web": "echo > dist/.nojekyll",
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
@@ -12,8 +13,7 @@
     "ios": "expo run:ios",
     "web": "expo start --web",
     "lint": "expo lint",
-    "build:web": "expo export --platform web",
-    "serve:web": "serve dist"
+    "serve:web": "npx serve dist"
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",

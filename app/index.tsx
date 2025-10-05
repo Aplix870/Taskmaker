@@ -104,7 +104,7 @@ useFocusEffect(
   if (error) {
     return (
       <View style={styles.center}>
-        <Text>Error in fetching data...</Text>
+          <Text style={[{fontFamily: "OswaldMedium", fontSize: 45 * scale}]}>Taskmaker</Text>
       </View>
     );
   }
@@ -132,7 +132,7 @@ useFocusEffect(
 
 {/*The title + button going to taskmaker page*/}
  <View style={[styles.titleContainer, { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }]}>
-  <Text style={[styles.textTitle,{fontSize: 30 * scale}]}>Taskmaker</Text>
+  <Text style={[styles.textTitle,{fontFamily: "PacificoRegular", fontSize: 45 * scale}]}>Taskmaker</Text>
   <TouchableOpacity onPress={() => router.push('/taskmaker')} style={{ backgroundColor: '#fff', padding: 10, borderRadius: 8 }}>
       <MaterialIcons
       name='format-list-bulleted-add'
@@ -193,18 +193,18 @@ useFocusEffect(
 
                     <View style={{ flex: 1, margin: 5, maxHeight: 80 }}>
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <Text style={[styles.textName, { color: item.textColour, flexShrink: 1 }]} numberOfLines={1}>
+                        <Text style={[styles.textName, { fontFamily: "SpaceMonoRegular",color: item.textColour, flexShrink: 1 }]} numberOfLines={1}>
                           {item.name}
                         </Text>
                         {item.dateTime && (
-                          <Text style={{ color: isPastDeadline ? 'red' : item.textColour }} numberOfLines={1}>
+                          <Text style={{ fontFamily: "SpaceMonoRegular", color: isPastDeadline ? 'red' : item.textColour }} numberOfLines={1}>
                             Due: {new Date(item.dateTime).toLocaleString()}
                           </Text>
                           //Red text if past deadline
                         )}
                       </View>
 
-                      <Text style={[styles.textEmail, { color: item.textColour }]} numberOfLines={2} ellipsizeMode="tail">
+                      <Text style={[styles.textEmail, { fontFamily: "SUSERegular", color: item.textColour }]} numberOfLines={2} ellipsizeMode="tail">
                         {item.description}
                       </Text>
                     </View>
@@ -232,7 +232,7 @@ useFocusEffect(
   {/* Center: title + due date */}
   <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
     <Text
-      style={[styles.textTitle, { color: selectedItem.textColour, fontSize: 50 * scale, textAlign: 'center' }]}
+      style={[styles.textTitle, {fontFamily: "SpaceMonoRegular", color: selectedItem.textColour, fontSize: 50 * scale, textAlign: 'center' }]}
       numberOfLines={1}
       adjustsFontSizeToFit
       minimumFontScale={0.2}
@@ -240,7 +240,7 @@ useFocusEffect(
       {selectedItem.name}
     </Text>
     {selectedItem.dateTime && (
-      <Text style={[styles.textContents, { color: selectedItem.textColour, fontSize: 30 * scale, margin: 20 * scale }]}>
+      <Text style={[styles.textContents, {fontFamily: "SpaceMonoRegular", color: selectedItem.textColour, fontSize: 30 * scale, margin: 20 * scale }]}>
         Due: {new Date(selectedItem.dateTime).toLocaleString()}
       </Text>
     )}
@@ -285,9 +285,8 @@ useFocusEffect(
   </View>
 </View>
 
-
       <View style={styles.detailsContent}>
-        <Text style={[styles.textContents, { color: selectedItem.textColour, fontSize: 30 * scale, margin: 20 * scale }]}>
+        <Text style={[styles.textContents, {fontFamily: "SUSERegular",color: selectedItem.textColour, fontSize: 30 * scale, margin: 20 * scale }]}>
           {selectedItem.description}
         </Text>
 
